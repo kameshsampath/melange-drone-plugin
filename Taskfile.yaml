@@ -98,7 +98,7 @@ tasks:
       - sh: '! crane manifest {{.PLUGIN_IMAGE}}:{{.TAG}} &>/dev/null && true'
         msg: "{{.TAG}} for image {{.PLUGIN_IMAGE}} already exists, skipping build"
     cmds:
-      - limactl shell {{.LIMA_INSTANCE}} sudo su -c "apko publish plugin.yaml {{.PLUGIN_IMAGE}}:{{.TAG}}"
+      - limactl shell {{.LIMA_INSTANCE}} sudo su -c "HOME=\"${HOME}\" apko publish plugin.yaml {{.PLUGIN_IMAGE}}:{{.TAG}}"
       - crane tag "{{.PLUGIN_IMAGE}}:{{.TAG}}" latest
     vars:
       TAG:
