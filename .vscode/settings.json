@@ -1,5 +1,0 @@
-{
-	"yaml.schemas": {
-		"https://json.schemastore.org/drone.json": "file:///Users/kameshs/MyLabs/harness/melange-drone-plugin/examples/defaults/.drone.yml"
-	}
-}
