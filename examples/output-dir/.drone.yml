@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: default
+  image: kameshsampath/melange-drone-plugin:latest
+  pull: if-not-exists
+  privileged: true
+  settings:
+    config_file: go-hello-world.yaml
+    output_dir: localPackages
+    archs:
+      - amd64
+      - arm64

@@ -1,0 +1,11 @@
+*.rsa
+dist
+packages
+.task
+temp
+work
+!.env.example
+secrets
+!examples/use-signing-key/foo.rsa
+localPackages
+examples/**/melange.rsa.pub
